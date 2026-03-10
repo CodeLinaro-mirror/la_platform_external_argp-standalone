@@ -1,0 +1,21 @@
+cc_library_host_static {
+    name: "libargp-musl",
+    srcs: ["argp-*.c"],
+    cflags: [
+        "-Wno-incompatible-pointer-types-discards-qualifiers",
+        "-DHAVE_UNISTD_H",
+        "-DHAVE_EX_USAGE",
+        "-DHAVE_ALLOCA_H",
+        "-DUNUSED=[[maybe_unused]]",
+        "-DHAVE_DECL_PROGRAM_INVOCATION_NAME",
+        "-DHAVE_DECL_PROGRAM_INVOCATION_SHORT_NAME",
+    ],
+    target: {
+        glibc: {
+            // Disabled for glibc. One should use argp from glibc directly.
+            enabled: false,
+        },
+    },
+    export_include_dirs: ["."],
+    visibility: ["//external/dwarves:__subpackages__"],
+}

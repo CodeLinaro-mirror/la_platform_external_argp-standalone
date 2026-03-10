@@ -1,0 +1,19 @@
+name: "argp-standalone"
+description: ""
+third_party {
+  version: "1.5.0"
+  license_type: RESTRICTED
+  last_upgrade_date {
+    year: 2025
+    month: 4
+    day: 10
+  }
+  homepage: "https://github.com/argp-standalone/argp-standalone"
+  identifier {
+    type: "Git"
+    value: "https://github.com/argp-standalone/argp-standalone"
+    version: "b931da3e7e9a999b0d9515c087488e96821845fb"
+    closest_version: "1.5.0"
+    primary_source: true
+  }
+}
